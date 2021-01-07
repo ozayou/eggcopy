@@ -1,0 +1,582 @@
+/*--------------------------------------
+reset css
+--------------------------------------*/
+
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+/*--------------------------------------
+reset css
+--------------------------------------*/
+
+body {
+    font-size: 15px;
+    font-family: Georgia, 游明朝, YuMincho, "Hiragino Mincho ProN", Meiryo, serif;
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+    color: #444444;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    height: 152px;
+    margin-top: 50px;
+    /*background-color: pink;*/
+}
+
+.container {
+    width: 100%;
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+.mheader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-left {
+    margin-top: 12px;
+}
+
+.header-left h1 {
+    font-size: 36px;
+    line-height: 42px;
+}
+
+.header-left p {
+    font-size: 18px;
+    /*line-height: 12px;*/
+}
+
+.header-right {
+    /*margin-top: 45px;*/
+    display: flex;
+}
+
+.header-nav {
+    position: relative;
+    right: 200px;
+    margin-top: 45px;
+}
+
+.gnav {
+    display: flex;
+    flex-wrap: nowrap;
+    /*position: fixed;
+    top: 103px;
+    right: 420px;*/
+    /*margin-right: 100px;*/
+    font-size: 16px;
+    letter-spacing: 0.8px;
+}
+
+.fas {
+    margin-left: 10px;
+}
+
+.gnav li {
+    padding: 0 15px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.gnav li a {
+    display: block;
+}
+
+.gnav li ul {
+    position: absolute;
+    top: 45px;
+    left: -5px;
+    height: 0;
+}
+
+.gnav li li {
+    width: 200px;
+    border: solid 1px #f0f0f0;
+    padding: 10px 20px;
+    box-shadow: 0.5px 0.5px #f0f0f0;
+    background-color: white;
+    display: none;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.gnav li:hover ul li {
+    display: block;
+    opacity: 1;
+}
+
+.gnav li a:hover {
+    color: #c49029;
+}
+
+.search-wrapper {
+    height: 40px;
+    margin-top: 34px;
+}
+
+.search {
+    height: 40px;
+    width: 0;
+    background: url(mushimegane.png) left center no-repeat;
+    background-size: 26px 26px;
+    padding-left: 30px;
+    font-size: 16px;
+    border: 1px solid #e0e0e0;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.search:focus {
+    width: 205px;
+    height: 34px;
+    border: 1px solid #e0e0e0;
+    background-color: white;
+    cursor: text;
+}
+
+
+.hamburger {
+  display : none;
+  position: fixed;
+  z-index : 3;
+  right : 13px;
+  top   : 12px;
+  width : 42px;
+  height: 42px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.hamburger span {
+  display : block;
+  position: absolute;
+  width   : 30px;
+  height  : 2px ;
+  left    : 6px;
+  background : #555;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition   : 0.3s ease-in-out;
+  transition        : 0.3s ease-in-out;
+}
+
+.hamburger span:nth-child(1) {
+  top: 10px;
+}
+.hamburger span:nth-child(2) {
+  top: 20px;
+}
+.hamburger span:nth-child(3) {
+  top: 30px;
+}
+
+/* ナビ開いてる時のボタン */
+.hamburger.active span:nth-child(1) {
+  top : 16px;
+  left: 6px;
+  background :#fff;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform   : rotate(-45deg);
+  transform        : rotate(-45deg);
+}
+
+.hamburger.active span:nth-child(2),
+.hamburger.active span:nth-child(3) {
+  top: 16px;
+  background :#fff;
+  -webkit-transform: rotate(45deg);
+  -moz-transform   : rotate(45deg);
+  transform        : rotate(45deg);
+}
+
+nav.globalMenuSp {
+  visibility: hidden;
+  position: fixed;
+  z-index : 2;
+  top  : 0;
+  left : 0;
+  color: #fff;
+  background: rgba(0,0,0,0.7);
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity .6s ease, visibility .6s ease;
+}
+
+nav.globalMenuSp ul {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+nav.globalMenuSp ul li {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  transition: .4s all;
+}
+/*nav.globalMenuSp ul li:last-child {
+  padding-bottom: 0;
+}
+nav.globalMenuSp ul li:hover{
+  background :#ddd;
+}*/
+
+nav.globalMenuSp ul li a {
+  display: block;
+  color: #fff;
+  padding: 2em 0;
+  text-decoration :none;
+}
+
+/* このクラスを、jQueryで付与・削除する */
+nav.globalMenuSp.active {
+  opacity: 100;
+
+}
+
+
+
+
+.top-wrapper {
+    height: 780px;
+}
+
+.top-wrapper img {
+    width: 100%;
+    max-width: 1035px;
+    height: 500px;
+    object-fit: cover;
+    object-position: 0 100%;
+}
+
+.top-wrapper p {
+    font-size: 27px;
+    color: #777777;
+    padding-top: 80px;
+}
+
+.main-wrapper {
+    /*height: 1440px;*/
+    border-bottom: 1px solid #ccc;
+}
+
+.main-wrapper .container{
+    /*border-bottom: 1px solid #ccc;*/
+    padding-bottom: 105px;
+}
+
+.text-box {
+    display: flex;
+    padding-bottom: 52px;
+    /*padding-top: 24px;*/
+}
+
+.text-area {
+    width: 700px;
+}
+
+.date {
+    margin-right: 220px;
+    font-size: 16.8px;
+    color: #999999;
+    padding-top: 24px;
+    opacity: 0.5;
+}
+
+.date:hover {
+    opacity: 1;
+}
+
+.text-heading {
+    font-size: 22.4px;
+    color: #111111;
+    padding-bottom: 20px;
+    padding-top: 14px;
+}
+
+.text-heading a:hover {
+    color: #c49029;
+}
+
+.text {
+    font-size: 16.8px;
+    color: #666666;
+}
+
+.page-list {
+    margin-left: 320px;
+}
+
+.page-list ul {
+    display: flex;
+}
+
+.page-list li {
+    list-style: none;
+    font-size: 16.8px;
+    border: 1px solid #777777;
+    padding: 8px 18px;
+    margin-left: 10px;
+    opacity: 0.5;
+}
+
+.page-list li:hover {
+    opacity: 1;
+}
+
+.page-list .this {
+    background-color: #eeeeee;
+    color: #333333;
+    opacity: 1;
+}
+
+.profile-wrapper .container{
+    height: 384px;
+    padding-top: 52px;
+    border-bottom: 1px solid #ccc;
+}
+
+.profile {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-left p {
+    font-size: 17px;
+    width: 260px;
+}
+
+.profile-top {
+    display: flex;
+    margin-bottom: 22px;
+}
+
+.photo {
+    border-radius: 50%;
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.name {
+    margin-top: 20px;
+    margin-bottom: 6px;
+    font-size: 19px;
+}
+
+.fab {
+    font-size: 23px;
+    margin-right: 10px;
+    color: #999;
+    opacity: 0.7;
+}
+
+.fab:hover {
+    opacity: 1;
+}
+
+.profile-right h2 {
+    margin-bottom: 30px;
+}
+
+.sub {
+    display: flex;
+}
+
+.footer-right {
+    width: 200px;
+    /*margin-left: 80px;*/
+    margin-right: 80px;
+}
+
+.recent-posts {
+    /*margin-left: 50px;*/
+    width: 193px;
+}
+
+.recent-posts h3 {
+    font-size: 17px;
+    color: #666666;
+    font-weight: normal;
+    border-bottom: 1px solid #ccc;
+    display: inline-block;
+    margin-bottom: 10px;
+    line-height: 20px;
+}
+
+.recent-posts a:hover {
+    color: #c49029;
+}
+
+.recent-posts p {
+    margin-bottom: 15px;
+}
+
+.category {
+    /*margin-left: 40px;*/
+}
+
+.category a {
+    display: inline-block;
+    font-size: 17px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    line-height: 20px;
+}
+
+.category a:hover {
+    color: #c49029;
+}
+
+.profile-search {
+    margin-top: 70px;
+    width: 100%;
+    max-width: 212px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 16px;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+}
+
+footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer-whole {
+    display: flex;
+}
+
+.footer-icon a {
+    margin-right: 8px;
+}
+
+.footer-logo {
+    margin-left: 210px;
+}
+
+.footer-logo p {
+    color: #999999;
+    font-size: 16px;
+}
+
+.footer-logo span {
+    color: #252525;
+    opacity: 0.8;
+}
+
+.footer-logo span:hover {
+    opacity: 1;
+}
